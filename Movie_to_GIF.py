@@ -1,7 +1,6 @@
 import imageio
 import os
 import sys
-from subprocess import Popen
 
 SPEED_MULTIPLIER = 5
 CREATE_NO_WINDOW = 0x08000000
