@@ -3,7 +3,7 @@ import os
 import sys
 
 SPEED_MULTIPLIER = 5
-CREATE_NO_WINDOW = 0x08000000
+MOVIE_FILE = 'movie_case007.mpg'
 
 def convertFile(inputpath, targetFormat):
     outputpath = os.path.splitext(inputpath)[0] + targetFormat
@@ -22,7 +22,7 @@ def convertFile(inputpath, targetFormat):
     return outputpath
 
 cwd = os.getcwd()
-Video_file = os.path.join(cwd, 'movie_case007.mpg')
+Video_file = os.path.join(cwd, MOVIE_FILE)
 gif_path = convertFile(Video_file, ".gif")
 
 command = 'gifsicle --optimize ' + gif_path + ' --colors 256 --output ' + os.path.join(cwd, 'optimized_gif.gif')
